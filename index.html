@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal de Apoio ao Estudante</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="logo">Apoio Estudantil</div>
+      <ul class="nav-links">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#escuta">Portal de Escuta</a></li>
+        <li><a href="#quiz">Quiz Interativo</a></li>
+        <li><a href="#referencias">Referências</a></li>
+      </ul>
+      <button id="toggle-contrast">Alto Contraste</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero-section">
+      <div class="hero-content">
+        <h1>Bem-vindo ao Portal de Apoio ao Estudante</h1>
+        <p class="boas-vindas">
+          Aqui você encontrará informações, orientações e apoio sobre situações vivenciadas no ambiente escolar.
+          Você não está sozinho!
+        </p>
+      </div>
+    </section>
+
+    <section id="escuta" class="section-container">
+      <h2>Portal de Escuta</h2>
+      <p>Este é um espaço seguro e simbólico para você desabafar. Lembre-se: nenhuma informação enviada aqui será salva.</p>
+      
+      <form id="form-escuta">
+        <label for="mensagem">Escreva seu desabafo ou pensamento:</label>
+        <textarea id="mensagem" rows="5" placeholder="Digite aqui..." required></textarea>
+        <button type="submit">Enviar Desabafo</button>
+      </form>
+
+      <div id="resposta-acolhimento" class="mensagem-acolhimento hidden"></div>
+
+      <div class="orientacoes">
+        <h3>Precisa de ajuda real agora?</h3>
+        <p>Se você está passando por um momento difícil, procure um adulto de confiança em sua escola (professor, pedagogo, direção) ou seus familiares.</p>
+        <p>Você também pode ligar gratuitamente para o <strong>CVV (Centro de Valorização da Vida)</strong> pelo número <strong>188</strong> ou acessar <a href="https://cvv.org.br" target="_blank">cvv.org.br</a>.</p>
+      </div>
+    </section>
+
+    <section id="quiz" class="section-container">
+      <h2>Quiz Interativo: Respeito e Convivência</h2>
+      <div id="quiz-container">
+        </div>
+      <button id="btn-submit-quiz">Finalizar Quiz</button>
+      <div id="resultado-quiz"></div>
+    </section>
+
+    <section id="referencias" class="section-container">
+      <h2>Referências</h2>
+      <ul>
+        <li><a href="https://www.gov.br/mdh/pt-br" target="_blank">Ministério dos Direitos Humanos e da Cidadania</a></li>
+        <li><a href="https://safernet.org.br/" target="_blank">SaferNet Brasil – Segurança Digital</a></li>
+        <li><a href="https://cvv.org.br/" target="_blank">CVV – Centro de Valorização da Vida</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; Projeto Individual - Portal de Apoio ao Estudante</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
