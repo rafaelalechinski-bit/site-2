@@ -1,92 +1,704 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portal de Apoio ao Estudante</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Portal do Respeito ♡</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Pacifico&display=swap" rel="stylesheet">
+
+    <!-- Ícones -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
+
 <body>
 
-  <header>
-    <nav class="navbar">
-      <div class="logo">Apoio Estudantil</div>
-      <ul class="nav-links">
-        <li><a href="#inicio">Início</a></li>
-        <li><a href="#escuta">Portal de Escuta</a></li>
-        <li><a href="#quiz">Quiz Interativo</a></li>
-        <li><a href="#referencias">Referências</a></li>
-      </ul>
-      <button id="toggle-contrast">Alto Contraste</button>
-    </nav>
-  </header>
+    <!-- CABEÇALHO -->
+    <header class="cabecalho">
 
-  <main>
-    <section id="inicio" class="hero-section">
-      <div class="hero-content">
-        <h1>Bem-vindo ao Portal de Apoio ao Estudante</h1>
-        <p class="boas-vindas">
-          Aqui você encontrará informações, orientações e apoio sobre situações vivenciadas no ambiente escolar.
-          Você não está sozinho!
-        </p>
-      </div>
-    </section>
-    <img>
-
-    <section id="escuta" class="section-container">
-      <h2>Portal de Escuta</h2>
-      <p>Este é um espaço seguro e simbólico para você desabafar. Lembre-se: nenhuma informação enviada aqui será salva.</p>
-      
-      <form id="form-escuta">
-        <label for="mensagem">Escreva seu desabafo ou pensamento:</label>
-        <textarea id="mensagem" rows="5" placeholder="Digite aqui..." required></textarea>
-        <button type="submit">Enviar Desabafo</button>
-      </form>
-
-      <div id="resposta-acolhimento" class="mensagem-acolhimento hidden"></div>
-
-      <div class="orientacoes">
-        <h3>Precisa de ajuda real agora?</h3>
-        <p>Se você está passando por um momento difícil, procure um adulto de confiança em sua escola (professor, pedagogo, direção) ou seus familiares.</p>
-        <p>Você também pode ligar gratuitamente para o <strong>CVV (Centro de Valorização da Vida)</strong> pelo número <strong>188</strong> ou acessar <a href="https://cvv.org.br" target="_blank">cvv.org.br</a>.</p>
-      </div>
-    </section>
-
-    <section id="quiz" class="section-container">
-      <h2>Quiz Interativo: Respeito e Convivência</h2>
-      <div id="quiz-container">
+        <div class="logo">
+            <span class="logo-emoji">🎀</span>
+            <div>
+                <span class="logo-principal">Portal do Respeito</span>
+                <small>Inclusão • Empatia • Diversidade</small>
+            </div>
         </div>
-      <button id="btn-submit-quiz">Finalizar Quiz</button>
-      <div id="resultado-quiz"></div>
-    </section>
 
-    <section id="referencias" class="section-container">
-      <h2>Referências</h2>
-      <ul>
-        <li><a href="https://www.gov.br/mdh/pt-br" target="_blank">Ministério dos Direitos Humanos e da Cidadania</a></li>
-        <li><a href="https://safernet.org.br/" target="_blank">SaferNet Brasil – Segurança Digital</a></li>
-        <li><a href="https://cvv.org.br/" target="_blank">CVV – Centro de Valorização da Vida</a></li>
-      </ul>
-    </section>
-  </main>
+        <button class="menu-mobile" id="menuMobile" aria-label="Abrir menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
 
-  <footer>
-    <p>&copy; Projeto Individual - Portal de Apoio ao Estudante</p>
-  </footer>
+        <nav id="menu">
+            <a href="#inicio"><i class="fa-solid fa-house"></i> Início</a>
+            <a href="#escuta"><i class="fa-solid fa-heart"></i> Portal de Escuta</a>
+            <a href="#quiz"><i class="fa-solid fa-puzzle-piece"></i> Quiz</a>
+            <a href="#referencias"><i class="fa-solid fa-book"></i> Referências</a>
+        </nav>
 
-  <script src="script.js"></script>
+    </header>
+
+
+    <!-- BOTÕES DE ACESSIBILIDADE -->
+    <div class="acessibilidade">
+
+        <button id="aumentarFonte" title="Aumentar fonte">
+            A+
+        </button>
+
+        <button id="diminuirFonte" title="Diminuir fonte">
+            A-
+        </button>
+
+        <button id="altoContraste" title="Alto contraste">
+            <i class="fa-solid fa-circle-half-stroke"></i>
+        </button>
+
+        <button id="modoEscuro" title="Modo escuro">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+
+    </div>
+
+
+    <main>
+
+        <!-- ================= INÍCIO ================= -->
+
+        <section id="inicio" class="hero">
+
+            <div class="hero-texto">
+
+                <span class="etiqueta">♡ UM ESPAÇO PARA TODOS ♡</span>
+
+                <h1>
+                    Portal do
+                    <span>Respeito</span>
+                </h1>
+
+                <h2>
+                    Inclusão, amizade e respeito às diferenças
+                </h2>
+
+                <p>
+                    Seja muito bem-vindo! Este é um espaço criado para
+                    conversar sobre respeito, diversidade, empatia,
+                    inclusão e convivência saudável no ambiente escolar.
+                </p>
+
+                <p>
+                    Aqui, cada pessoa tem seu jeito, sua história,
+                    seus sonhos e suas características. E todas essas
+                    diferenças merecem ser respeitadas. 💗
+                </p>
+
+                <div class="botoes-hero">
+                    <a href="#escuta" class="botao principal">
+                        <i class="fa-solid fa-heart"></i>
+                        Quero conversar
+                    </a>
+
+                    <a href="#quiz" class="botao secundario">
+                        Fazer o quiz
+                    </a>
+                </div>
+
+            </div>
+
+
+            <div class="hero-imagem">
+
+                <div class="decoracao decoracao-1">♡</div>
+                <div class="decoracao decoracao-2">🎀</div>
+                <div class="decoracao decoracao-3">♡</div>
+
+                <!-- Ilustração decorativa -->
+                <div class="gatinha">
+                    <div class="orelha esquerda"></div>
+                    <div class="orelha direita"></div>
+
+                    <div class="cabeca-gatinha">
+                        <div class="olho olho-esq"></div>
+                        <div class="olho olho-dir"></div>
+
+                        <div class="nariz"></div>
+
+                        <div class="bigode b1"></div>
+                        <div class="bigode b2"></div>
+                        <div class="bigode b3"></div>
+
+                        <div class="bigode b4"></div>
+                        <div class="bigode b5"></div>
+                        <div class="bigode b6"></div>
+
+                        <div class="lacinho">
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+
+                    <div class="corpo-gatinha">
+                        ♡
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CARDS ================= -->
+
+        <section class="secao">
+
+            <div class="titulo-secao">
+                <span>♡</span>
+                <h2>Respeitar é acolher</h2>
+                <span>♡</span>
+            </div>
+
+            <div class="cards">
+
+                <article class="card">
+                    <div class="icone">💗</div>
+                    <h3>Empatia</h3>
+                    <p>
+                        Tente compreender os sentimentos das outras
+                        pessoas e trate todos com gentileza.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="icone">🌸</div>
+                    <h3>Diversidade</h3>
+                    <p>
+                        Nossas diferenças tornam o mundo mais rico,
+                        interessante e especial.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="icone">🤝</div>
+                    <h3>Inclusão</h3>
+                    <p>
+                        Todas as pessoas devem ter espaço para participar,
+                        aprender e se expressar.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="icone">🎀</div>
+                    <h3>Respeito</h3>
+                    <p>
+                        Respeitar significa reconhecer o valor e a
+                        dignidade de cada pessoa.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CARROSSEL ================= -->
+
+        <section class="carrossel-secao">
+
+            <div class="titulo-secao">
+                <span>♡</span>
+                <h2>Juntos somos mais fortes</h2>
+                <span>♡</span>
+            </div>
+
+            <div class="carrossel">
+
+                <div class="slide ativo">
+                    <div class="slide-conteudo">
+                        <span>🌸</span>
+                        <h3>Ser diferente é normal</h3>
+                        <p>
+                            Cada pessoa possui características, culturas,
+                            opiniões e histórias diferentes.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <div class="slide-conteudo">
+                        <span>💗</span>
+                        <h3>Palavras podem transformar</h3>
+                        <p>
+                            Escolha palavras que acolham, apoiem e façam
+                            as pessoas se sentirem respeitadas.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="slide">
+                    <div class="slide-conteudo">
+                        <span>🎀</span>
+                        <h3>Ninguém precisa ficar sozinho</h3>
+                        <p>
+                            Quando algo estiver fazendo você sofrer,
+                            procure alguém de confiança para conversar.
+                        </p>
+                    </div>
+                </div>
+
+                <button class="slide-btn anterior" onclick="mudarSlide(-1)">
+                    ❮
+                </button>
+
+                <button class="slide-btn proximo" onclick="mudarSlide(1)">
+                    ❯
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PORTAL DE ESCUTA ================= -->
+
+        <section id="escuta" class="secao escuta">
+
+            <div class="titulo-secao">
+                <span>♡</span>
+                <h2>Portal de Escuta</h2>
+                <span>♡</span>
+            </div>
+
+            <div class="escuta-grid">
+
+                <div class="escuta-texto">
+
+                    <div class="coracao-grande">
+                        💗
+                    </div>
+
+                    <h3>Você pode falar.</h3>
+
+                    <p>
+                        Às vezes precisamos colocar nossos sentimentos
+                        para fora. Este espaço é uma simulação para você
+                        escrever aquilo que gostaria de compartilhar.
+                    </p>
+
+                    <p>
+                        <strong>Importante:</strong> este formulário é
+                        apenas educativo. Nenhuma informação digitada
+                        será armazenada ou enviada.
+                    </p>
+
+                    <div class="orientacoes">
+
+                        <h3>Quando precisar de ajuda:</h3>
+
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Converse com um professor.
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Procure o pedagogo ou a direção da escola.
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Conte para seus familiares.
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Procure outro adulto de confiança.
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Se estiver em perigo, procure ajuda
+                                imediatamente.
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+                <div class="formulario-box">
+
+                    <h3>
+                        <i class="fa-solid fa-heart"></i>
+                        Escreva seu desabafo
+                    </h3>
+
+                    <form id="formEscuta">
+
+                        <label for="nome">
+                            Como podemos chamar você? (opcional)
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nome"
+                            placeholder="Ex.: Maria"
+                        >
+
+                        <label for="desabafo">
+                            O que você gostaria de compartilhar?
+                        </label>
+
+                        <textarea
+                            id="desabafo"
+                            rows="7"
+                            placeholder="Escreva aqui... Você não precisa escrever nada que não queira."
+                            required
+                        ></textarea>
+
+                        <button type="submit" class="botao principal">
+                            <i class="fa-solid fa-paper-plane"></i>
+                            Enviar simulação
+                        </button>
+
+                    </form>
+
+                    <div id="mensagemAcolhimento" class="mensagem-acolhimento"></div>
+
+                </div>
+
+            </div>
+
+
+            <!-- FRASES MOTIVACIONAIS -->
+
+            <div class="frases">
+
+                <div class="frase">
+                    <span>🌷</span>
+                    <p>
+                        "Você não precisa ser igual a ninguém para
+                        ter valor."
+                    </p>
+                </div>
+
+                <div class="frase">
+                    <span>💗</span>
+                    <p>
+                        "Suas diferenças fazem parte da sua história."
+                    </p>
+                </div>
+
+                <div class="frase">
+                    <span>🎀</span>
+                    <p>
+                        "Pedir ajuda também é uma forma de coragem."
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= QUIZ ================= -->
+
+        <section id="quiz" class="secao quiz-secao">
+
+            <div class="titulo-secao">
+                <span>♡</span>
+                <h2>Quiz do Respeito</h2>
+                <span>♡</span>
+            </div>
+
+            <p class="intro-quiz">
+                Teste seus conhecimentos sobre respeito, inclusão,
+                bullying e segurança digital!
+            </p>
+
+            <div id="quiz-container">
+
+                <div class="pergunta">
+
+                    <span class="numero-pergunta">1</span>
+
+                    <h3>
+                        Uma pessoa é constantemente chamada por apelidos
+                        ofensivos por colegas. Isso pode ser bullying?
+                    </h3>
+
+                    <label>
+                        <input type="radio" name="q1" value="a">
+                        Sim
+                    </label>
+
+                    <label>
+                        <input type="radio" name="q1" value="b">
+                        Não, porque é apenas uma brincadeira.
+                    </label>
+
+                </div>
+
+
+                <div class="pergunta">
+
+                    <span class="numero-pergunta">2</span>
+
+                    <h3>
+                        Qual atitude demonstra respeito às diferenças?
+                    </h3>
+
+                    <label>
+                        <input type="radio" name="q2" value="a">
+                        Fazer piadas sobre quem é diferente.
+                    </label>
+
+                    <label>
+                        <input type="radio" name="q2" value="b">
+                        Ouvir, respeitar e incluir as outras pessoas.
+                    </label>
+
+                    <label>
+                        <input type="radio" name="q2" value="c">
+                        Excluir alguém do grupo.
+                    </label>
+
+                </div>
+
+
+                <div class="pergunta">
+
+                    <span class="numero-pergunta">3</span>
+
+                    <h3>
+                        O que fazer ao presenciar uma situação de bullying?
+                    </h3>
+
+                    <label>
+                        <input type="radio" name="q3" value="a">
+                        Incentivar a situação.
+                    </label>
+
+                    <label>
+                        <input type="radio" name="q3" value="b">
+                        Ignorar sempre.
+                    </label>
+
+                    <label>
+                        <input type="radio" name="q3" value="c">
+                        Procurar um adulto de confiança e oferecer apoio.
+                    </label>
+
+                </div>
+
+
+                <div class="pergunta">
+
+                    <span class="numero-pergunta">4</span>
+
+                    <h3>
+                        Qual destas senhas é mais segura?
+                    </h3>
+
+                    <label>
+                        <input type="radio" name="q4" value="a">
+                        123456
+                    </label>
+
+                    <label>
+                        <input type="radio" name="q4" value="b">
+                        maria2010
+                    </label>
+
+                    <label>
+                        <input type="radio" name="q4" value="c">
+                        Lua!Rosa_27#Azul
+                    </label>
+
+                </div>
+
+
+                <div class="pergunta">
+
+                    <span class="numero-pergunta">5</span>
+
+                    <h3>
+                        Um colega possui uma característica diferente da
+                        maioria da turma. O que você faria?
+                    </h3>
+
+                    <label>
+                        <input type="radio" name="q5" value="a">
+                        Tentaria conhecê-lo e tratá-lo com respeito.
+                    </label>
+
+                    <label>
+                        <input type="radio" name="q5" value="b">
+                        Evitaria conversar com ele.
+                    </label>
+
+                    <label>
+                        <input type="radio" name="q5" value="c">
+                        Faria comentários sobre sua aparência.
+                    </label>
+
+                </div>
+
+                <button class="botao principal" id="corrigirQuiz">
+                    <i class="fa-solid fa-star"></i>
+                    Ver meu resultado
+                </button>
+
+                <div id="resultadoQuiz"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= REFERÊNCIAS ================= -->
+
+        <section id="referencias" class="secao referencias">
+
+            <div class="titulo-secao">
+                <span>♡</span>
+                <h2>Referências</h2>
+                <span>♡</span>
+            </div>
+
+            <p>
+                As informações utilizadas neste projeto foram pesquisadas
+                em fontes institucionais e educativas confiáveis.
+            </p>
+
+            <div class="referencias-lista">
+
+                <a href="https://www.unicef.org/brazil/relatorios/educacao-que-protege-contra-violencia"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="referencia">
+                    <i class="fa-solid fa-book-open"></i>
+                    <div>
+                        <strong>UNICEF Brasil</strong>
+                        <span>
+                            A Educação que protege contra a violência
+                        </span>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+
+                <a href="https://www.unicef.org/brazil/educacao-que-protege"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="referencia">
+                    <i class="fa-solid fa-school"></i>
+                    <div>
+                        <strong>UNICEF Brasil</strong>
+                        <span>
+                            Educação que Protege
+                        </span>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+
+                <a href="https://www.unesco.org/en/articles/what-you-need-know-about-school-violence-and-bullying"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="referencia">
+                    <i class="fa-solid fa-globe"></i>
+                    <div>
+                        <strong>UNESCO</strong>
+                        <span>
+                            School Violence and Bullying
+                        </span>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+
+                <a href="https://www.unesco.org/en/articles/defining-school-bullying-and-its-implications-education-teachers-and-learners"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="referencia">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <div>
+                        <strong>UNESCO</strong>
+                        <span>
+                            Definição e prevenção do bullying escolar
+                        </span>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+
+                <a href="https://cartilha.cert.br/fasciculos/autenticacao/fasciculo-autenticacao-alta.pdf"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="referencia">
+                    <i class="fa-solid fa-lock"></i>
+                    <div>
+                        <strong>CERT.br / NIC.br</strong>
+                        <span>
+                            Cartilha de Segurança para Internet —
+                            Autenticação e senhas
+                        </span>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+
+    <footer>
+
+        <div class="footer-coracao">
+            🎀
+        </div>
+
+        <h3>Portal do Respeito</h3>
+
+        <p>
+            Um projeto educativo sobre inclusão, empatia,
+            diversidade e respeito às diferenças.
+        </p>
+
+        <div class="footer-links">
+            <a href="#inicio">Início</a>
+            <a href="#escuta">Escuta</a>
+            <a href="#quiz">Quiz</a>
+            <a href="#referencias">Referências</a>
+        </div>
+
+        <p class="copyright">
+            © 2026 • Projeto educativo
+        </p>
+
+    </footer>
+
+
+    <!-- BOTÃO VOLTAR AO TOPO -->
+
+    <button id="voltarTopo" title="Voltar ao topo">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+
+    <script src="script.js"></script>
+
 </body>
 </html>
-<section id="inicio" class="hero-section">
-  <div class="hero-content">
-    
-    <h1>Bem-vindo ao Portal de Apoio ao Estudante</h1>
-    
-    <img src="imagens/05_geha_blog_impacto_horario_escolar (1).jpg" alt="Estudantes em sala de aula" class="imagem-destaque">
-    
-    <p class="boas-vindas">
-      Aqui você encontrará informações, orientações e apoio sobre situações vivenciadas no ambiente escolar.
-    </p>
-
-  </div>
-</section>
